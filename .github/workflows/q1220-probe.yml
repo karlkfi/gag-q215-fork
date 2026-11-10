@@ -1,0 +1,9 @@
+# Q1220/Q1330 measurement: what the run object reports when the base repository is itself a fork.
+name: q1220-probe
+on: pull_request
+permissions: {}
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "repo=$GITHUB_REPOSITORY ref=$GITHUB_REF"
